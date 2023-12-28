@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import GithubIcon from "../icons/Github.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import SocialBadge from "../components/SocialBadge.astro";
+---
+
+<Layout title="Porfolio Buap">
+  <main>
+    <section class="max-w-screen-sm px-10 py-44 mx-auto md:max-w-screen-md lg:max-w-screen-lg lg:px-0">
+      <div class="flex flex-row gap-x-4 pb-5">
+        <img
+          class="rounded-full size-14"
+          src="https://cdn.theorg.com/cb019f88-c5b1-46a8-839f-a0c1e1dddc60_medium.jpg"
+          alt="buap"
+        />
+        <a
+          href="https://linkedin.com/in/midudev"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para ofertas</Badge>
+        </a>
+      </div>
+      <h1 class="text-white text-2xl font-bold pb-10 lg:text-5xl md:text-3xl">Hey, soy Brayan Ulisses Arias perez</h1>
+      <h2 class="text-xl lg:text-3xl md:text-2xl text-balance pb-10">
+        <span class="text-yellow-200">Desarrollador fullstack</span> con más de 4 años de experiencia, <span
+          class="text-sky-200">especializado en aplicaciones web y móviles</span
+        >. Con base en <span class="text-red-200">Mazatlán, Sinaloa, México</span>.
+      </h2>
+
+      <nav class="flex gap-x-4">
+        <SocialBadge>
+          <GithubIcon class="w-6 h-6" />
+           Github
+        </SocialBadge>
+        <SocialBadge>
+          <LinkedInIcon class="w-6 h-6" />
+           LinkedIn
+        </SocialBadge>
+        <SocialBadge>
+          <GithubIcon class="w-6 h-6" />
+           Email
+        </SocialBadge>
+      </nav>
+    </section>
+  </main>
+</Layout>
