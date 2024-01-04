@@ -1,0 +1,49 @@
+---
+import ReactIcon from "../icons/React.astro";
+import TailwindCSSIcon from "../icons/TailwindCSS.astro";
+import GraphQLIcon from "../icons/GraphQL.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-[#0D2538] text-white",
+    icon: ReactIcon,
+  },
+  APOLLO: {
+    name: "GraphQL",
+    class: "bg-[#e535ab] text-white",
+    icon: GraphQLIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Apphive - Create your app in minutes",
+    description:
+      "Apphive es un creador de aplicaciones móviles avanzado, que permite crear apps dinámicas sin la necesidad de escribir una sola línea de código. Simplemente arrastra y suelta los elementos, edita y tendrás una aplicación móvil en minutos.",
+    image: "projectapphive.webp",
+    link: "https://www.google.com",
+    tags: [TAGS.REACT, TAGS.APOLLO],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, link, tags }) => (
+    <article>
+      <h3 class="text-lg font-semibold text-yellow-200 mt-2 mb-3">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex flex-row items-center gap-x-2 rounded-full text-xs px-2 py-1 ${tag.class}`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img class="rounded-lg shadow-md pt-8" src={image} alt={title} />
+    </article>
+  ))
+}

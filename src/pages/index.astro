@@ -1,14 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import Experience from "../components/Experience.astro";
 import GithubIcon from "../icons/Github.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import SocialBadge from "../components/SocialBadge.astro";
+import BriefcaseIcon from "../icons/Briefcase.astro";
+import CodeIcon from "../icons/Code.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout title="Porfolio Buap">
+<Layout
+  title="Porfolio Buap"
+  description="Soy Brayan Ulisses Arias perez, desarrollador fullstack con más de 4 años de experiencia, especializado en aplicaciones web y móviles. Con base en Mazatlán, Sinaloa, México."
+>
   <main>
-    <section class="max-w-screen-sm px-10 py-44 mx-auto md:max-w-screen-md lg:max-w-screen-lg lg:px-0">
+    <SectionContainer class="pt-44">
       <div class="flex flex-row gap-x-4 pb-5">
         <img
           class="rounded-full size-14"
@@ -34,17 +42,33 @@ import SocialBadge from "../components/SocialBadge.astro";
       <nav class="flex gap-x-4">
         <SocialBadge>
           <GithubIcon class="w-6 h-6" />
-           Github
+          Github
         </SocialBadge>
         <SocialBadge>
           <LinkedInIcon class="w-6 h-6" />
-           LinkedIn
+          LinkedIn
         </SocialBadge>
         <SocialBadge>
           <GithubIcon class="w-6 h-6" />
-           Email
+          Email
         </SocialBadge>
       </nav>
-    </section>
+    </SectionContainer>
+
+    <SectionContainer id="experience" class="pt-20">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <BriefcaseIcon class="size-8" />
+        Experencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects" class="pt-20">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+        <CodeIcon class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
   </main>
 </Layout>
