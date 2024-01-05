@@ -2,8 +2,6 @@
 const routes = [
   { href: "#experience", text: "Experencia" },
   { href: "#projects", text: "Proyectos" },
-  { href: "#about", text: "Sobre mí" },
-  { href: "#contact", text: "Contacto" },
 ];
 ---
 
@@ -11,7 +9,7 @@ const routes = [
   <nav class="border border-black rounded-full px-2 py-1 flex flex-row bg-black/50 backdrop-blur-2xl">
     {
       routes.map((route) => (
-        <a class="hover:bg-white/10 rounded-full px-3 transition" href={route.href}>
+        <a class="hover:bg-white/10 rounded-full px-3 transition text-xs lg:text-lg md:text-sm" href={route.href}>
           {route.text}
         </a>
       ))

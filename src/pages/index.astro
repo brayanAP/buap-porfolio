@@ -4,11 +4,14 @@ import Badge from "../components/Badge.astro";
 import Experience from "../components/Experience.astro";
 import GithubIcon from "../icons/Github.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
-import SocialBadge from "../components/SocialBadge.astro";
+import Button from "../components/Button.astro";
 import BriefcaseIcon from "../icons/Briefcase.astro";
 import CodeIcon from "../icons/Code.astro";
+import MailIcon from "../icons/Mail.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
+import H1 from "../components/H1.astro";
+import H2 from "../components/H2.astro";
 ---
 
 <Layout
@@ -16,7 +19,7 @@ import Projects from "../components/Projects.astro";
   description="Soy Brayan Ulisses Arias perez, desarrollador fullstack con más de 4 años de experiencia, especializado en aplicaciones web y móviles. Con base en Mazatlán, Sinaloa, México."
 >
   <main>
-    <SectionContainer class="pt-44">
+    <SectionContainer class="pt-14 md:pt-24 lg:pt-44">
       <div class="flex flex-row gap-x-4 pb-5">
         <img
           class="rounded-full size-14"
@@ -32,42 +35,42 @@ import Projects from "../components/Projects.astro";
           <Badge>Disponible para ofertas</Badge>
         </a>
       </div>
-      <h1 class="text-white text-2xl font-bold pb-10 lg:text-5xl md:text-3xl">Hey, soy Brayan Ulisses Arias perez</h1>
-      <h2 class="text-xl lg:text-3xl md:text-2xl text-balance pb-10">
+      <H1 class="text-white pb-10">Hey, soy Brayan Ulisses Arias perez</H1>
+      <H2 class="text-balance pb-10">
         <span class="text-yellow-200">Desarrollador fullstack</span> con más de 4 años de experiencia, <span
           class="text-sky-200">especializado en aplicaciones web y móviles</span
         >. Con base en <span class="text-red-200">Mazatlán, Sinaloa, México</span>.
-      </h2>
+      </H2>
 
       <nav class="flex gap-x-4">
-        <SocialBadge>
-          <GithubIcon class="w-6 h-6" />
+        <Button href="https://github.com/brayanAP">
+          <GithubIcon class="w-5 h-5" />
           Github
-        </SocialBadge>
-        <SocialBadge>
-          <LinkedInIcon class="w-6 h-6" />
+        </Button>
+        <Button href="https://www.linkedin.com/in/buapmz">
+          <LinkedInIcon class="w-4 h-4" />
           LinkedIn
-        </SocialBadge>
-        <SocialBadge>
-          <GithubIcon class="w-6 h-6" />
+        </Button>
+        <Button href="mailto:brulariaspe@gmail.com?subject=Contacto2&body=Hola">
+          <MailIcon class="w-5 h-5" />
           Email
-        </SocialBadge>
+        </Button>
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experience" class="pt-20">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+    <SectionContainer id="experience" class="pt-16 md:pt-24">
+      <H2 class="mb-6 flex gap-x-2 items-center">
         <BriefcaseIcon class="size-8" />
         Experencia laboral
-      </h2>
+      </H2>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="projects" class="pt-20">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+    <SectionContainer id="projects" class="pt-12 md:pt-20">
+      <H2 class="mb-6 flex gap-x-2 items-center">
         <CodeIcon class="size-8" />
         Proyectos
-      </h2>
+      </H2>
       <Projects />
     </SectionContainer>
   </main>

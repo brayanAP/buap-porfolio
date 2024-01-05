@@ -1,12 +1,13 @@
 ---
 import ReactIcon from "../icons/React.astro";
-import TailwindCSSIcon from "../icons/TailwindCSS.astro";
 import GraphQLIcon from "../icons/GraphQL.astro";
+import H3 from "./H3.astro";
+import Paragraph from "./Paragraph.astro";
 
 const TAGS = {
   REACT: {
     name: "React",
-    class: "bg-[#0D2538] text-white",
+    class: "bg-[#61DAFB] text-gray-600",
     icon: ReactIcon,
   },
   APOLLO: {
@@ -31,8 +32,8 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, image, link, tags }) => (
     <article>
-      <h3 class="text-lg font-semibold text-yellow-200 mt-2 mb-3">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <H3 class="text-yellow-200 mt-2 mb-3">{title}</H3>
+      <Paragraph class="mb-4 text-pretty">{description}</Paragraph>
       <ul class="flex gap-x-4 flex-row">
         {tags.map((tag) => (
           <li>
