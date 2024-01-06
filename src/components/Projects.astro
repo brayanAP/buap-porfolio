@@ -23,21 +23,20 @@ const PROJECTS = [
     description:
       "Apphive es un creador de aplicaciones móviles avanzado, que permite crear apps dinámicas sin la necesidad de escribir una sola línea de código. Simplemente arrastra y suelta los elementos, edita y tendrás una aplicación móvil en minutos.",
     image: "projectapphive.webp",
-    link: "https://www.google.com",
     tags: [TAGS.REACT, TAGS.APOLLO],
   },
 ];
 ---
 
 {
-  PROJECTS.map(({ title, description, image, link, tags }) => (
+  PROJECTS.map(({ title, description, image, tags }) => (
     <article>
       <H3 class="text-yellow-200 mt-2 mb-3">{title}</H3>
-      <Paragraph class="mb-4 text-pretty">{description}</Paragraph>
+      <Paragraph class="mb-4 text-pretty text-white">{description}</Paragraph>
       <ul class="flex gap-x-4 flex-row">
         {tags.map((tag) => (
           <li>
-            <span class={`flex flex-row items-center gap-x-2 rounded-full text-xs px-2 py-1 text-white ${tag.class}`}>
+            <span class={`flex flex-row items-center gap-x-2 rounded-full text-xs px-2 py-1 ${tag.class}`}>
               <tag.icon class="size-4" />
               {tag.name}
             </span>
