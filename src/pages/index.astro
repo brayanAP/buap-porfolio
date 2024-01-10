@@ -8,10 +8,12 @@ import Button from "../components/Button.astro";
 import BriefcaseIcon from "../icons/Briefcase.astro";
 import CodeIcon from "../icons/Code.astro";
 import MailIcon from "../icons/Mail.astro";
+import InfoIcon from "../icons/Info.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
 import H1 from "../components/H1.astro";
 import H2 from "../components/H2.astro";
+import Paragraph from "../components/Paragraph.astro";
 ---
 
 <Layout
@@ -22,7 +24,7 @@ import H2 from "../components/H2.astro";
     <SectionContainer class="pt-14 md:pt-24 lg:pt-44">
       <div class="flex flex-row gap-x-4 pb-5">
         <img
-          class="rounded-full size-14"
+          class="rounded-full size-20 md:size-28"
           src="https://cdn.theorg.com/cb019f88-c5b1-46a8-839f-a0c1e1dddc60_medium.jpg"
           alt="buap"
         />
@@ -37,9 +39,9 @@ import H2 from "../components/H2.astro";
       </div>
       <H1 class="text-white pb-10">Hey, soy Brayan Ulisses Arias perez</H1>
       <H2 class="text-balance pb-10 text-white">
-        <span class="text-yellow-200">Desarrollador fullstack</span> con más de 4 años de experiencia, <span
-          class="text-sky-200">especializado en aplicaciones web y móviles</span
-        >. Con base en <span class="text-red-200">Mazatlán, Sinaloa, México</span>.
+        <span class="text-yellow-300">Desarrollador fullstack</span> con más de 4 años de experiencia, <span
+          class="text-sky-300">especializado en aplicaciones web y móviles</span
+        >. Con base en <span class="text-red-300">Mazatlán, Sinaloa, México</span>.
       </H2>
 
       <nav class="flex gap-x-4">
@@ -58,9 +60,36 @@ import H2 from "../components/H2.astro";
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experience" class="pt-16 md:pt-24">
+    <SectionContainer id="about" class="pt-16 md:pt-24">
       <H2 class="mb-6 flex gap-x-2 items-center text-white">
-        <BriefcaseIcon class="size-8 text-white" />
+        <InfoIcon class="size-4 lg:size-8 text-white" />
+        Sobre mi
+      </H2>
+      <Paragraph class="text-white mb-3">
+        Soy un Ingeniero en Sistemas con más de 4 años de experiencia <span class="text-sky-300 font-bold"
+          >especializado en el desarrollo tanto frontend como backend</span
+        >. Mi capacidad de comunicación, tanto verbal como escrita, es una de mis principales fortalezas, destacándome
+        por un <span class="text-green-300 font-bold">enfoque proactivo y una alta productividad</span>. Poseo una
+        perspectiva amplia y habilidades sociales que me permiten interactuar de manera efectiva con diversos equipos y
+        stakeholders.
+      </Paragraph>
+      <Paragraph class="text-white mb-3">
+        Mi capacidad para abordar problemas y encontrar soluciones de manera colaborativa ha sido perfeccionada a lo
+        largo de mi trayectoria, gracias a mi experiencia en el trabajo en equipo. Mi paciencia y perseverancia son
+        características fundamentales, y mi <span class="text-green-300 font-bold"
+          >pasión y entusiasmo por la programación</span
+        > se reflejan en mi desempeño diario.
+      </Paragraph>
+      <Paragraph class="text-white mb-3">
+        En la actualidad, mi enfoque se centra en las tecnologías <span class="text-yellow-300 font-bold"
+          >JavaScript/TypeScript</span
+        >, incluyendo <span class="text-yellow-300 font-bold">React, React Native, GraphQL y Node.js</span>
+      </Paragraph>
+    </SectionContainer>
+
+    <SectionContainer id="experience" class="pt-12 md:pt-20">
+      <H2 class="mb-6 flex gap-x-2 items-center text-white">
+        <BriefcaseIcon class="size-4 lg:size-8 text-white" />
         Experencia laboral
       </H2>
       <Experience />
@@ -68,7 +97,7 @@ import H2 from "../components/H2.astro";
 
     <SectionContainer id="projects" class="pt-12 md:pt-20">
       <H2 class="mb-6 flex gap-x-2 items-center text-white">
-        <CodeIcon class="size-8 text-white" />
+        <CodeIcon class="size-4 lg:size-8 text-white" />
         Proyectos
       </H2>
       <Projects />
